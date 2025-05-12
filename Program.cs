@@ -2,8 +2,8 @@
 /// 
 HouseData House1 = new HouseData(123, "123 Maria Road", "3 story apartment");
 HouseData House2 = new HouseData(130, "130 Maria Road", "5 story apartment");
-HouseData House3 = new HouseData(135, "135 Palisade Street", "single family housing");
-HouseData House4 = new HouseData(158, "158 Swancreek Avenue", "single family housing");
+HouseData House3 = new HouseData(135, "135 Palisade Street", "Ranch");
+HouseData House4 = new HouseData(158, "158 Swancreek Avenue", "Colonial");
 HouseData House5 = new HouseData(1711, "1711 Maria Road", "5 story apartment");
 
 var LList = new HouseLinkedList(new HouseNode(House1));
@@ -99,6 +99,7 @@ class HouseLinkedList
             return;
         }
         pointer.Next = pointer.Next.Next;
+        Length--;
     }
 
     public HouseNode Get(int index)
